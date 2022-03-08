@@ -79,6 +79,10 @@ public class GeradorArquivo {
 		
 		escreverEmDisco(conteudo.toString().toUpperCase(), "agua-luz-contratos.txt");
 	}
+	public void gerarContrato(String conteudo,String cpf) {
+		cpf = cpf.replaceAll("\\D", "");
+		escreverEmDisco(conteudo, cpf.concat(".txt"));
+	}
 	private void escreverEmDisco(String conteudo, String nomeArquivo) {
 		//C:\estudo\mjv-java-school\agua-luz-output;
 		File dir = new File("/estudo/mjv-java-school/agua-luz-output");

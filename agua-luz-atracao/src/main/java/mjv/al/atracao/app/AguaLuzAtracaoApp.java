@@ -14,6 +14,7 @@ import mjv.al.atracao.service.GeradorArquivo;
 
 
 
+
 public class AguaLuzAtracaoApp {
 	private static ContratoRepository contratoRepositorio = new ContratoRepository();
 	public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class AguaLuzAtracaoApp {
 	}
 	
 	private static void faseAtrairCadastroContratos() {
-		System.out.println("\n*** INICIANDO A FASE DE ATRAÇÃODE CONTRATOS ***");
+		System.out.println("\n*** INICIANDO A FASE DE ATRAï¿½ï¿½ODE CONTRATOS ***");
 		Contrato contrato = new Contrato();
         contrato.setNumeroProtocolo(2022025687L);
         contrato.setServico(Servico.LUZ);
@@ -38,11 +39,11 @@ public class AguaLuzAtracaoApp {
         Endereco endereco = new Endereco();
         endereco.setBairro("Santo Antonio");
         endereco.setCep("08220970");
-        endereco.setCidade("São Paulo");
+        endereco.setCidade("Sï¿½o Paulo");
         endereco.setEstado("SP");
         endereco.setLogradouro("Rua das Marias");
         endereco.setNumero("243");
-        endereco.setComplemento("Próximo ao quebra molas");
+        endereco.setComplemento("Prï¿½ximo ao quebra molas");
         pessoa.setEndereco(endereco);
         
         contrato.setPessoa(pessoa);
@@ -75,18 +76,18 @@ public class AguaLuzAtracaoApp {
         contrato2.setDataHora(LocalDateTime.now().plusHours(4).plusMinutes(17));
         System.out.println(contrato2);
         contratoRepositorio.gravar(contrato2);
-        System.out.println("*** FINALIZANDO A FASE DE ATRAÇÃO DE CONTRATOS ***");
+        System.out.println("*** FINALIZANDO A FASE DE ATRAï¿½ï¿½O DE CONTRATOS ***");
 		
 	}
 	
 	private static void faseGeracaoArquivos() {
-		System.out.println("\n*** INICIANDO A FASE DE GERAÇÃO DE ARQUIVOS ***\n");
+		System.out.println("\n*** INICIANDO A FASE DE GERAï¿½ï¿½O DE ARQUIVOS ***\n");
 		
 		List<Contrato> contratos = contratoRepositorio.listarTodos();
 		
 		GeradorArquivo gerador = new GeradorArquivo();
 		gerador.gerarArquivoTxt(contratos);
-		System.out.println("\n*** FINALIZANDO A FASE DE GERAÇÃO DE CONTEUDOS***");
+		System.out.println("\n*** FINALIZANDO A FASE DE GERAï¿½ï¿½O DE CONTEUDOS***");
 		
 	}
 }

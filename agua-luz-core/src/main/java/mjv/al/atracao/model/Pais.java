@@ -1,7 +1,7 @@
 package mjv.al.atracao.model;
 
 public enum Pais {
-	BR("Brasil") ,
+	BR ("Brasil") ,
 	PE ("Peru") ,
 	US ("Estados Unidos") ;
 	
