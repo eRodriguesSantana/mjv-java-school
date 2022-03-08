@@ -10,6 +10,7 @@ import mjv.al.atracao.model.Pais;
 import mjv.al.atracao.model.Pessoa;
 import mjv.al.atracao.model.Servico;
 import mjv.al.atracao.repository.ContratoRepository;
+import mjv.al.atracao.service.GeradorArquivo;
 
 
 
@@ -17,7 +18,7 @@ public class AguaLuzAtracaoApp {
 	private static ContratoRepository contratoRepositorio = new ContratoRepository();
 	public static void main(String[] args) {
 		faseAtrairCadastroContratos();
-		//faseGeracaoArquivos();
+		faseGeracaoArquivos();
 	}
 	
 	private static void faseAtrairCadastroContratos() {
@@ -83,8 +84,8 @@ public class AguaLuzAtracaoApp {
 		
 		List<Contrato> contratos = contratoRepositorio.listarTodos();
 		
-		//GeradorArquivo gerador = new GeradorArquivo();
-		//gerador.gerarArquivoTxt(contratos);
+		GeradorArquivo gerador = new GeradorArquivo();
+		gerador.gerarArquivoTxt(contratos);
 		System.out.println("\n*** FINALIZANDO A FASE DE GERAÇÃO DE CONTEUDOS***");
 		
 	}
