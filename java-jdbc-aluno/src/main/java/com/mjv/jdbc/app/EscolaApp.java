@@ -7,22 +7,15 @@ import com.mjv.jdbc.util.FabricaConexao;
 public class EscolaApp {
 	public static void main(String[] args) {
 		try {
-			Aluno athos = new Aluno();
-			athos.setAltura(1.83);
-			athos.setAtivo(true);
-			athos.setNome("ATHOS");
-			athos.setSexo("M");
-			
-			Aluno marcelle = new Aluno();
-			marcelle.setAltura(1.88);
-			marcelle.setAtivo(true);
-			marcelle.setNome("MARCELLE");
-			marcelle.setSexo("F");
+			Aluno aloisio = new Aluno();
+			//athos.setAltura(1.83);
+			aloisio.setAtivo(true);
+			aloisio.setNome("ALOISIO");
+			aloisio.setSexo("M");
 			
 			
 			AlunoRepository alunoRepository = new AlunoRepository();
-			alunoRepository.gravar(athos);
-			alunoRepository.gravar(marcelle);
+			alunoRepository.gravar(aloisio);
 			
 			FabricaConexao.fecharConexao();
 			
