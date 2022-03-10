@@ -8,7 +8,7 @@ import com.mjv.jdbc.util.FabricaConexao;
 
 public class AlunoRepository {
 	//padrao CRUD
-	
+	//ResultSet - selects
 	public void gravar(Aluno aluno) {
 		try {
 			FabricaConexao.abrirConexao();
