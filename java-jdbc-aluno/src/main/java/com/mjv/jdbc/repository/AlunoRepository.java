@@ -21,7 +21,11 @@ public class AlunoRepository {
 
 			PreparedStatement procedimentoSql = connection.prepareStatement(sql.toString());
 			procedimentoSql.setString(1, aluno.getNome());
-			procedimentoSql.setDouble(2, aluno.getAltura()==null?0.0:aluno.getAltura());
+			if(aluno.getAltura()==null)
+				procedimentoSql.setNull(2, java.sql.Types.NULL);
+			else
+				procedimentoSql.setDouble(2, aluno.getAltura());
+			
 			procedimentoSql.setString(3, aluno.getSexo());
 			procedimentoSql.setBoolean(4, aluno.isAtivo());
 			procedimentoSql.setInt(5, 2211001);//jamais deve ser um valor fixo

@@ -10,7 +10,7 @@ public class EscolaApp {
 			Aluno aloisio = new Aluno();
 			//athos.setAltura(1.83);
 			aloisio.setAtivo(true);
-			aloisio.setNome("ALOISIO");
+			aloisio.setNome("MIGUEL");
 			aloisio.setSexo("M");
 			
 			
