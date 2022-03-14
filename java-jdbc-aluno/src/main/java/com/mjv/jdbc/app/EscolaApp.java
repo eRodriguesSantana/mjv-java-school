@@ -1,5 +1,7 @@
 package com.mjv.jdbc.app;
 
+import java.util.List;
+
 import com.mjv.jdbc.model.Aluno;
 import com.mjv.jdbc.repository.AlunoRepository;
 import com.mjv.jdbc.util.FabricaConexao;
@@ -7,16 +9,20 @@ import com.mjv.jdbc.util.FabricaConexao;
 public class EscolaApp {
 	public static void main(String[] args) {
 		try {
-			Aluno aloisio = new Aluno();
-			//athos.setAltura(1.83);
-			aloisio.setAtivo(true);
-			aloisio.setNome("MIGUEL");
-			aloisio.setSexo("M");
+			Aluno miguel = new Aluno();
+			miguel.setAltura(1.83);
+			miguel.setAtivo(true);
+			miguel.setNome("MIGUEL");
+			miguel.setSexo("M");
 			
 			
 			AlunoRepository alunoRepository = new AlunoRepository();
-			alunoRepository.gravar(aloisio);
+			//alunoRepository.save(miguel);
 			
+			List<Aluno> alunos = alunoRepository.listAll(false);
+			for(Aluno a: alunos) {
+				System.out.println(a);
+			}
 			FabricaConexao.fecharConexao();
 			
 			
