@@ -79,6 +79,7 @@ public class AlunoRepository {
 		try {
 			PreparedStatement procedimentoSql = conexao.prepareStatement("SELECT * FROM tab_aluno where ativo = ?"); 
 			procedimentoSql.setBoolean(1, ativo);
+			
 			ResultSet rs = procedimentoSql.executeQuery();
 			while(rs.next()) {
 				
