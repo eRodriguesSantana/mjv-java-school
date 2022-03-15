@@ -31,6 +31,11 @@ public class AlunoJpaRepository {
 		Query query = em.createQuery("SELECT a FROM Aluno a");
 		return query.getResultList();
 	}
+	public List<Aluno> findAllContratos(){
+		//JPQL - TODO O SELECT É BASEADO NO OBJETO
+		Query query = em.createQuery("SELECT a FROM Contrato a");
+		return query.getResultList();
+	}
 	public List<Aluno> findAllAtivo(boolean ativo){
 		//JPQL - TODO O SELECT É BASEADO NO OBJETO
 		Query query = em.createQuery("SELECT a FROM Aluno a WHERE a.ativo = :p1");
